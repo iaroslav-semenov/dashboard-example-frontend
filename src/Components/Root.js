@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 
 import Login from './Layouts/Login';
 import Dashboard from './Layouts/Dashboard';
+import NotFound from './Layouts/NotFound';
 
 class Root extends React.Component {
     constructor() {
@@ -38,6 +39,7 @@ class Root extends React.Component {
                     <Route path="/dashboard" component={ Dashboard } />
                 </Route>
                 <Route path="/login" component={ Login } onEnter={ this.checkIfAuthorized } />
+                <Route path='*' component={ NotFound } />
             </Router>
         );
     }

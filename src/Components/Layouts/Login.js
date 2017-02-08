@@ -9,7 +9,7 @@ import style from '../../Styles/login.scss';
 class Login extends React.Component {
     render() {
         return (
-            <Container className="h100p">
+            <Container className="h-100">
                 <Row className="justify-content-center h100p">
                     <Col sm="6" className="align-self-center">
                         <Card>
