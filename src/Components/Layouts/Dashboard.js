@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { render } from 'react-dom';
 
 import Footer from './Shared/Footer';
-import Navigation from './Dashboard/Navigation';
+import Navigation from './Shared/Navigation';
 import Contentblock from './Dashboard/Contentblock';
 
 class Dashboard extends React.Component {
