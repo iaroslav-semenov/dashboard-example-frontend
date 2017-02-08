@@ -11,7 +11,7 @@ class Root extends React.Component {
     }
 
     checkAccess(nextState, replace, callback) {
-        let isAuthorized = false;
+        let isAuthorized = true;
         console.log('isAuthorized', isAuthorized);
         if (!isAuthorized) {
             replace('/login');
@@ -21,7 +21,7 @@ class Root extends React.Component {
     };
 
     checkIfAuthorized(nextState, replace, callback) {
-        let isAuthorized = false;
+        let isAuthorized = true;
 
         if (isAuthorized) {
             replace('/');
