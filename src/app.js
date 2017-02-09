@@ -8,4 +8,7 @@ import Root from './Components/Root';
 import 'bootstrap/dist/css/bootstrap.css';
 import style from './Styles/global.scss';
 
-render(<Root history={ browserHistory } />, document.getElementById('app'));
+/** Storage */
+import Store from './Controll/Store';
+
+render(<Root history={ browserHistory } store={ Store } />, document.getElementById('app'));
