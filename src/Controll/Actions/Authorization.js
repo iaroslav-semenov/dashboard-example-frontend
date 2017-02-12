@@ -1,8 +1,10 @@
 
-const loginWithCredentials = (login, password) => ({
-    type: "AUTHORIZATION_LOGIN_CREDENTIALS",
-    login,
-    password
-})
+const login = (username, password) => ({
+    type: "AUTHORIZATION_LOGIN",
+    username
+});
+const logout = () => ({
+    type: "AUTHORIZATION_LOGOUT"
+});
 
-export { loginWithCredentials };
+export { login, logout };

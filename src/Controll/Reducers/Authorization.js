@@ -1,10 +1,21 @@
 
 
-const AuthorizationReducer = (state = {}, action) => {
-    console.log('AuthorizationReducer:state', state);
-    console.log('AuthorizationReducer:action', action);
-
-    return Object.assign({}, state, { isAuthorized: action.login == 'user' });
+const Authorization = (state = {}, action) => {
+    switch (action.type) {
+        case 'AUTHORIZATION_LOGIN':
+            return {
+                ...state,
+                isAuthorized: true,
+                username: action.username
+            };
+        case 'AUTHORIZATION_LOGOUT':
+            return {
+                ...state,
+                isAuthorized: false
+            };
+        default:
+            return state;
+    }
 };
 
-export default AuthorizationReducer;
+export default Authorization;

@@ -5,10 +5,10 @@ import { Card, CardBlock, CardHeader } from 'reactstrap';
 
 import style from '../../Styles/login.scss';
 
-import Auth from '../../Containers/Auth';
+import Login from '../../Containers/Login';
 import Footer from './Shared/Footer';
 
-class Login extends React.Component {
+class LoginPage extends React.Component {
     render() {
         return (
             <div className="h-100">
@@ -18,7 +18,7 @@ class Login extends React.Component {
                             <Card>
                                 <CardHeader>Login</CardHeader>
                                 <CardBlock>
-                                    <Auth />
+                                    <Login />
                                 </CardBlock>
                             </Card>
                         </Col>
@@ -30,4 +30,4 @@ class Login extends React.Component {
     }
 }
 
-export default Login;
+export default LoginPage;

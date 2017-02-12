@@ -1,7 +1,11 @@
-import { createStore } from 'redux';
-import AuthorizationReducer from './Reducers/Authorization';
+import { createStore, combineReducers } from 'redux';
+import Authorization from './Reducers/Authorization';
 
-const Store = createStore(AuthorizationReducer);
+const reducers = combineReducers({
+    Authorization
+});
+
+const Store = createStore(reducers);
 
 console.log('Initial state: ', Store.getState());
 

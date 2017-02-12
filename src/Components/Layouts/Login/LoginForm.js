@@ -4,7 +4,7 @@ import { Form, FormGroup, Input, Button } from 'reactstrap';
 const LoginForm = ({ onSubmit }) => (
     <Form onSubmit={ (event) => onSubmit(event) }>
         <FormGroup>
-            <Input name="login" placeholder="Login" type="text"/>
+            <Input name="username" placeholder="Login" type="text"/>
         </FormGroup>
         <FormGroup>
             <Input name="password" placeholder="Password" type="password"/>

@@ -14,7 +14,8 @@ module.exports = {
 				exclude: [ path.resolve(__dirname, 'node_module') ],
 				include: [ path.resolve(__dirname, 'src') ],
                 options: {
-				    presets: [ 'es2015', 'react' ]
+				    presets: [ 'es2015', 'react' ],
+                    plugins: ['transform-object-rest-spread']
                 }
 			},
             {

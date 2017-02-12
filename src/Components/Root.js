@@ -3,7 +3,7 @@ import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux'
 import { render } from 'react-dom';
 
-import Login from './Layouts/Login';
+import LoginPage from './Layouts/LoginPage';
 import Dashboard from './Layouts/Dashboard';
 import NotFound from './Layouts/NotFound';
 
@@ -15,7 +15,9 @@ class Root extends React.Component {
     }
 
     handleAuth() {
-        if (this.props.store.getState().isAuthorized) {
+        const { Authorization } = this.props.store.getState();
+
+        if (Authorization.isAuthorized) {
             this.props.history.push('/');
         } else {
             this.props.history.push('/login');
@@ -23,7 +25,8 @@ class Root extends React.Component {
     }
 
     isAuthorized() {
-        return this.props.store.getState().isAuthorized;
+        console.log('isAuthorized', this.props.store.getState());
+        return this.props.store.getState().Authorization.isAuthorized;
     }
 
     checkIfAuthorized(nextState, replace, callback) {
@@ -54,7 +57,7 @@ class Root extends React.Component {
                         <IndexRoute component={ Dashboard }/>
                         <Route path="/dashboard" component={ Dashboard } />
                     </Route>
-                    <Route path="/login" component={ Login } onEnter={ this.checkIfNotAuthorized.bind(this) } />
+                    <Route path="/login" component={ LoginPage } onEnter={ this.checkIfNotAuthorized.bind(this) } />
                     <Route path='*' component={ NotFound } />
                 </Router>
             </Provider>
